@@ -124,8 +124,14 @@ main {
 	border-radius: 15px;
 }
 
+.map {
+	border: 8px #000 solid;
+	width: 95%;
+	height: 50%;
+}
+
 /* Media Query For Tablet Viewport */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 630px), print {
 	
 	/* Tablet Viewport: show tablet-desktop class, hide mobile class */
 	.tablet-desktop {
@@ -157,25 +163,119 @@ main {
 	nav ul li a {
 		padding: 0.1em 0.75em;
 	}
-}
 	
-/* End of Media Query For Tablet Viewport */
+	/* Tablet Viewport: Main CSS */
+	main ul {
+		margin: 0 0 4% 10%
+	}
 	
-/*#exercises {
+	#exercises {
 	clear: both;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-	background-color: #f2f2f2;
+	border: 5px solid #a00;
+	background: linear-gradient(to right, #427, #552);
+	/*	background-color: f2f2f2;*/
 	padding: 1% 2%;
-}
+	}
 
-#exercises dt {
-	font-weight: bold;
-}
+	#exercises dt {
+		font-weight: bold;
+	}
 
-#exercises dd {
-	padding: 0.5% 1% 2% 0;
-}*/
+	#exercises dd {
+		padding: 0.5% 1% 2% 0;
+	}
+	
+	#contact {
+		text-align: center;
+	}
+	
+	.tel-num {
+		font-size: 1.5em;
+	}
+	
+	.map {
+		width: 600px;
+		height: 450px;
+	}
+	
+}/* End of Media Query For Tablet Viewport */
+
+/* Media Query For Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+	
+	/* Desktop Viewport: Header CSS */
+	header{
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	} 
+	
+	/* Desktop Viewport: Nav CSS */
+	nav {
+		font-size: .98em;
+		float: right;
+		width: 70%;
+		margin: 2em 1em 0 0;
+	}
+	
+	nav ul {
+		text-align: right;
+	}
+	
+	nav ul li{
+		border: 5px solid black;
+	}
+	
+	nav ul li a {
+		padding: 0.5em 1em;
+	}
+	
+	nav ul li a:hover {
+		color: #000;
+		background-color: #fff;
+		border-radius: 1000px;
+	}
+	
+	/* Desktop Viewport: Main CSS */
+	main {
+		clear: both;
+	}
+	
+	main h1 {
+		font-size: 1.5em;
+	}
+	
+	#weights, #cardio, #training {
+		width: 29%;
+		float: left;
+		margin: 0 2%;
+	}
+	
+	#exercises {
+		clear: left;
+	}
+	
+}/* End of Media Query For Desktop Viewport */
+
+/* Large-Screen Media Query */
+@media screen and (min-width: 1921px) {
+	
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+}/* End of Media Query For Large-screen Viewport */
+
+/* Print Media Query */
+@media print {
+	
+	/* Print Body */
+	body {
+		background-color: #fff;
+		color: #000;
+	}
+}
 
 .external-link {
 	color: #606;
@@ -188,12 +288,6 @@ main {
 	text-decoration: none;
 }
 
-.map {
-	border: 8px #000 solid;
-	width: 95%;
-	height: 50%;
-}
-
 /* Style rules for footer */ 
 footer p {
 	font-size: 0.75em;
@@ -202,7 +296,7 @@ footer p {
 	padding: 0 1em;
 }
 
-footer p a{
+footer p a {
 	color: #fff;
 	text-decoration: none;
 }
