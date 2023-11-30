@@ -1,0 +1,302 @@
+/* 
+	Author: Connor Shoen
+	Date: 11/03/2023
+	File Name: styles.css
+*/
+
+/* 
+Fonts:
+font-family: 'Francois One', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;900&display=swap');
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Style Rules for Body and Images */ 
+body {
+	background-color: #000;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Style rules for Mobile Viewport */
+
+/* Style rules for Header */ 
+header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: #000;
+	height: 190px;
+}
+
+header a img {
+	margin: 0 auto;
+}
+
+/* Style rules for Navigation */ 
+nav {
+	padding: 1%;
+	margin-bottom: 1%;
+}
+
+nav ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+nav ul li {
+	font-size: 1.5em;
+	font-family: 'Francois One', sans-serif;
+	border-top: 1px solid #fff;
+}
+
+nav ul li:first-child {
+	border-top: none;
+}
+
+nav ul li a {
+	display: block;
+	color: #FFFFFF;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+/* Show Mobile Class, Hide tablet-desktop class */
+.mobile {
+	display: block;
+}
+
+.tablet-desktop {
+	display: none;
+}
+
+/* Style rules for Main Content */ 
+main {
+	clear: both;
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.15em;
+	font-family: 'Roboto Slab', serif;
+}
+
+.tel-link {	
+	background-color: #404040;
+	padding: 2%;
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	border-radius: 1000px;
+}
+
+.tel-link a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5em;
+	display: block;
+}
+
+.hours {
+	margin-left: 10%;
+}
+
+.action {
+	font-size: 1.35em;
+	color: #606;
+	font-weight: bold;
+}
+
+#weights, #cardio, #training {
+	margin: 0 2%;
+}
+
+.round {
+	border-radius: 15px;
+}
+
+.map {
+	border: 8px #000 solid;
+	width: 95%;
+	height: 50%;
+}
+
+/* Media Query For Tablet Viewport */
+@media screen and (min-width: 630px), print {
+	
+	/* Tablet Viewport: show tablet-desktop class, hide mobile class */
+	.tablet-desktop {
+		display: block;
+	}
+	
+	.mobile {
+		display: none;
+	}
+	
+	/* Tablet Viewport: Header CSS */
+	header {
+		position: static;
+		padding-bottom: 2%;
+	}
+	
+	/* Tablet Viewport: Nav CSS */
+	nav ul li {
+		border-top: none;
+		border-bottom: none;
+		display: inline-block;
+		border-right: 1px solid #fff;
+	}
+	
+	nav ul li:last-child {
+		border-right: none;
+	}
+	
+	nav ul li a {
+		padding: 0.1em 0.75em;
+	}
+	
+	/* Tablet Viewport: Main CSS */
+	main ul {
+		margin: 0 0 4% 10%
+	}
+	
+	#exercises {
+	clear: both;
+	border: 5px solid #a00;
+	background: linear-gradient(to right, #427, #552);
+	/*	background-color: f2f2f2;*/
+	padding: 1% 2%;
+	}
+
+	#exercises dt {
+		font-weight: bold;
+	}
+
+	#exercises dd {
+		padding: 0.5% 1% 2% 0;
+	}
+	
+	#contact {
+		text-align: center;
+	}
+	
+	.tel-num {
+		font-size: 1.5em;
+	}
+	
+	.map {
+		width: 600px;
+		height: 450px;
+	}
+	
+}/* End of Media Query For Tablet Viewport */
+
+/* Media Query For Desktop Viewport */
+@media screen and (min-width: 1015px), print {
+	
+	/* Desktop Viewport: Header CSS */
+	header{
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	} 
+	
+	/* Desktop Viewport: Nav CSS */
+	nav {
+		font-size: .98em;
+		float: right;
+		width: 70%;
+		margin: 2em 1em 0 0;
+	}
+	
+	nav ul {
+		text-align: right;
+	}
+	
+	nav ul li{
+		border: 5px solid black;
+	}
+	
+	nav ul li a {
+		padding: 0.5em 1em;
+	}
+	
+	nav ul li a:hover {
+		color: #000;
+		background-color: #fff;
+		border-radius: 1000px;
+	}
+	
+	/* Desktop Viewport: Main CSS */
+	main {
+		clear: both;
+	}
+	
+	main h1 {
+		font-size: 1.5em;
+	}
+	
+	#weights, #cardio, #training {
+		width: 29%;
+		float: left;
+		margin: 0 2%;
+	}
+	
+	#exercises {
+		clear: left;
+	}
+	
+}/* End of Media Query For Desktop Viewport */
+
+/* Large-Screen Media Query */
+@media screen and (min-width: 1921px) {
+	
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+}/* End of Media Query For Large-screen Viewport */
+
+/* Print Media Query */
+@media print {
+	
+	/* Print Body */
+	body {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+.external-link {
+	color: #606;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#contact .contact-email-link {
+	color: #606;
+	text-decoration: none;
+}
+
+/* Style rules for footer */ 
+footer p {
+	font-size: 0.75em;
+	text-align: center;
+	color: #fff;
+	padding: 0 1em;
+}
+
+footer p a {
+	color: #fff;
+	text-decoration: none;
+}
