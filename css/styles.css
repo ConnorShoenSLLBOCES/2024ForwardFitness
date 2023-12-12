@@ -13,7 +13,7 @@ font-family: 'Roboto Slab', serif;
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, li, figure, figcaption {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -124,12 +124,6 @@ main {
 	text-shadow: 5px 5px 8px #ccc;
 }
 
-.frame {
-	position: relative;
-	max-width: 450px;
-	margin: 2% auto;
-}
-
 .pic-text {
 	position: absolute;
 	bottom: 0;
@@ -142,6 +136,18 @@ main {
 	font-size: 1.5em;
 	font-weight: bold;
 	
+}
+
+.frame {
+	opacity: 0.9;
+	position: relative;
+	max-width: 450px;
+	margin: 2% auto;
+}
+
+.frame:hover {
+	opacity: 1;
+	box-shadow: 8px 8px 10px #808080;
 }
 
 #weights, #cardio, #training {
