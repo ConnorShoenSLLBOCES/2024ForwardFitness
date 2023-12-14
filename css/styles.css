@@ -13,7 +13,7 @@ font-family: 'Roboto Slab', serif;
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;900&display=swap');
 
 /* CSS Reset */
-* {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -95,6 +95,28 @@ main {
 
 .mobile {
 	text-shadow: 5px 5px 8px #ccc;
+}
+
+article {
+	padding: 2%;
+}
+
+article h3 {
+	text-align: center;
+}
+
+article img {
+	margin: 0 auto;
+}
+
+article ul {
+	margin-left: 10%;
+}
+
+article:nth-last-of-type(2) {
+	background-color: #000;
+	color: #fff;
+	border-radius: 30px;
 }
 
 .tel-link {	
@@ -213,11 +235,27 @@ main {
 		padding: 10px;
 	}
 	
+	aside {
+		text-align: center;
+		font-size: 1.25;
+		font-style: italic;
+		font-weight: bold;
+		padding: 2%;
+		background-color: #000;
+		color: #fff;
+		box-shadow: 5px 5px 8px #808080;
+		text-shadow: 5px 5px 8px #808080;
+		border-radius: 30px;
+	}
+	
+	.grid-item4 {
+		grid-column: 1 / span3;
+	}
+	
 	#exercises {
 	clear: both;
-	border: 5px solid #a00;
-	background: linear-gradient(to right, #427, #552);
-	/*	background-color: f2f2f2;*/
+	border: 1px solid #000;
+	background: linear-gradient(to right, #427, #C1AF2C);
 	padding: 1% 2%;
 	}
 
@@ -287,6 +325,15 @@ main {
 	
 	main h1 {
 		font-size: 1.5em;
+	}
+	
+	article h3 {
+		font-size: 1.45em;
+	}
+	
+	.pic-text {
+		font-size: 1.3em;
+		padding: 20%;
 	}
 	
 	#weights, #cardio, #training {
