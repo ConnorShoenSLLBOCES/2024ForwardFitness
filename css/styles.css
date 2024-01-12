@@ -13,7 +13,7 @@ font-family: 'Roboto Slab', serif;
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, table {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,7 +24,11 @@ body {
 	background-color: #000;
 }
 
-img {
+video {
+	border-radius: 50px;
+}
+
+img, video {
 	max-width: 100%;
 	display: block;
 }
@@ -255,7 +259,9 @@ article:nth-last-of-type(2) {
 	#exercises {
 	clear: both;
 	border: 1px solid #000;
-	background: linear-gradient(to right, #427, #C1AF2C);
+	border-top: none;
+	border-right: none;
+	background: linear-gradient(to right, #fff, #ccc);
 	padding: 1% 2%;
 	}
 
@@ -279,6 +285,46 @@ article:nth-last-of-type(2) {
 		width: 600px;
 		height: 450px;
 	}
+	
+	/* Tablet Table */
+	table {
+		border: 1px solid #000;
+		border-collapse: collapse;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	caption {
+		font-size: 2.5em;
+		font-weight: bold;
+		padding: 1%;
+	}
+	
+	tr:nth-child(odd) {
+		background-color: #ccc;
+	}
+	
+	th {
+		color: #fff;
+		background-color: #000;
+		font-size: 1.5em;
+		border: 1px solid #fff;
+		padding: 2%;
+	}
+	
+	th:first-child {
+		border-left: none;
+	}
+	
+	th:last-child {
+		border-right: none;
+	}
+	
+	td {
+		border: 1px solid #000;
+		padding: 2%;
+	}
+	
 	
 }/* End of Media Query For Tablet Viewport */
 
@@ -350,44 +396,38 @@ article:nth-last-of-type(2) {
 
 /* Large-Screen Media Query */
 @media screen and (min-width: 1921px) {
-	
+	 
 	#container {
 		width: 1920px;
 		margin: 0 auto;
 	}
 	
-}/* End of Media Query For Large-screen Viewport */
-
-/* Print Media Query */
-@media print {
-	
-	/* Print Body */
-	body {
-		background-color: #fff;
-		color: #000;
-	}
-}
-
-.external-link {
+	.external-link {
 	color: #606;
 	font-weight: bold;
 	text-decoration: none;
-}
+	}
 
-#contact .contact-email-link {
-	color: #606;
-	text-decoration: none;
-}
+	#contact .contact-email-link {
+		color: #606;
+		text-decoration: none;
+	}
+
+	table {
+		width: 80%;
+	}
+
+}/* End of Media Query For Large-screen Viewport */
 
 /* Style rules for footer */ 
-footer p {
-	font-size: 0.75em;
-	text-align: center;
-	color: #fff;
-	padding: 0 1em;
-}
+	footer p {
+		font-size: 0.75em;
+		text-align: center;
+		color: #fff;
+		padding: 0 1em;
+	}
 
-footer p a {
-	color: #fff;
-	text-decoration: none;
-}
+	footer p a {
+		color: #fff;
+		text-decoration: none;
+	}
